@@ -74,7 +74,7 @@
 
         <!-- Banner Section -->
         <div
-          class="hero min-h-screen rounded-[31px]"
+          class="hero min-h-screen rounded-[31px] relative"
           style="background-image: url('images/banner.png')"
         >
           <div class="hero-overlay rounded-[31px] bg-opacity-60"></div>
@@ -95,12 +95,38 @@
             </div>
           </div>
         </div>
-        <div>
-          <div class="flex gap-4 bg-white">
-            <img src="images/people.png" alt="" />
-            <div class="font-inter">
-              <h2 class="text-4xl font-bold">500K+</h2>
-              <p class="text-lg font-normal">Registered users</p>
+
+        <!-- User section -->
+        <div class="flex justify-center">
+          <div
+            class="max-w-7xl grid grid-cols-3 gap-5 absolute bottom-[-180px] lg:bottom-[-125px]"
+          >
+            <div
+              class="flex flex-col md:flex-row gap-4 border-b-4 border-[#1DD100] rounded-3xl py-4 px-8 max-w-72 items-center bg-white"
+            >
+              <img src="images/people.png" alt="" class="w-12 h-12" />
+              <div class="font-inter text-center">
+                <h2 class="text-4xl font-bold">500K+</h2>
+                <p class="text-lg font-normal">Registered users</p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col md:flex-row gap-4 border-b-4 border-[#1DD100] rounded-3xl py-4 px-8 max-w-72 items-center bg-white"
+            >
+              <img src="images/ticket-cupon.png " alt="" class="w-12 h-12" />
+              <div class="font-inter text-center">
+                <h2 class="text-4xl font-bold">1.7 lacks</h2>
+                <p class="text-lg font-normal">Tickets sold</p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col md:flex-row gap-4 border-b-4 border-[#1DD100] rounded-3xl py-4 px-8 max-w-72 items-center bg-white"
+            >
+              <img src="images/stoppage.png" alt="" class="w-12 h-12" />
+              <div class="font-inter text-center">
+                <h2 class="text-4xl font-bold">80K+</h2>
+                <p class="text-lg font-normal">Rental partners</p>
+              </div>
             </div>
           </div>
         </div>
