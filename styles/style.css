@@ -7,3 +7,7 @@ body {
 .font-inter {
   font-family: "Inter", sans-serif;
 }
+
+.primary_color{
+    color: #1DD100;
+}
