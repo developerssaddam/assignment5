@@ -205,7 +205,9 @@
               class="info_container flex flex-col md:flex-row justify-between items-center gap-4 p-6 bg-white rounded-2xl my-10"
             >
               <!-- Left -->
-              <div class="flex-1 md:border-r-2 md:border-dashed md:px-4 lg:px-5">
+              <div
+                class="flex-1 md:border-r-2 md:border-dashed md:px-4 lg:px-5"
+              >
                 <!--Left header -->
                 <div
                   class="flex flex-col gap-2 md:flex-row justify-between items-center w-full"
@@ -269,7 +271,215 @@
               </div>
             </div>
 
+            <!-- Ticket Info -->
+            <div
+              class="ticketInfoContainer flex flex-col md:flex-row justify-center gap-8 bg-white p-8 rounded-2xl"
+            >
+              <div class="ticketInfo flex-1">
+                <h3
+                  class="text-2xl font-semibold border-b-2 border-dashed py-2"
+                >
+                  Select Your Seat
+                </h3>
 
+                <!-- indicator -->
+                <div
+                  class="indicatioContainer flex flex-col md:flex-row items-center gap-3 md:justify-between font-inter text-lg font-medium border-b-2 border-dashed py-2"
+                >
+                  <div class="indicatior_left flex flex-1 gap-2">
+                    <img src="images/seat-gray.png" alt="" />
+                    <p>Avalilable</p>
+                  </div>
+                  <div class="indicator_right flex gap-2">
+                    <img src="images/seat-green.png" alt="" />
+                    <p class="text-[#1DD100]">Selected</p>
+                  </div>
+                  <div class="indicatior_right"></div>
+                </div>
+
+                <div class="flex justify-end py-2">
+                  <p class="bg-[#E5E6E7] px-5 py-1 rounded-lg">
+                    <img src="images/wheel.png" alt="" />
+                  </p>
+                </div>
+
+                <!-- Seat Container -->
+                <div class="seatContainer font-inter flex gap-2">
+                  <div
+                    class="serial grid grid-cols-1 gap-3 *:px-6 *:py-2 *:rounded-lg *:text-[#7D8085] *:flex *:justify-center"
+                  >
+                    <p>A</p>
+                    <p>B</p>
+                    <p>C</p>
+                    <p>D</p>
+                    <p>E</p>
+                    <p>F</p>
+                    <p>G</p>
+                    <p>H</p>
+                    <p>I</p>
+                    <p>J</p>
+                  </div>
+                  <div
+                    class="grid grid-cols-4 gap-3 *:bg-[#F7F8F8] *:px-6 *:py-2 *:rounded-lg *:text-[#7D8085] *:flex *:justify-center"
+                  >
+                    <button>A1</button>
+                    <button>A2</button>
+                    <button>A3</button>
+                    <button>A4</button>
+                    <button>B1</button>
+                    <button>B2</button>
+                    <button>B3</button>
+                    <button>B4</button>
+                    <button>C1</button>
+                    <button>C2</button>
+                    <button>C3</button>
+                    <button>C4</button>
+                    <button>D1</button>
+                    <button>D2</button>
+                    <button>D3</button>
+                    <button>D4</button>
+                    <button>E1</button>
+                    <button>E2</button>
+                    <button>E3</button>
+                    <button>E4</button>
+                    <button>F1</button>
+                    <button>F2</button>
+                    <button>F3</button>
+                    <button>F4</button>
+                    <button>G1</button>
+                    <button>G2</button>
+                    <button>G3</button>
+                    <button>G4</button>
+                    <button>H1</button>
+                    <button>H2</button>
+                    <button>H3</button>
+                    <button>H4</button>
+                    <button>I1</button>
+                    <button>I2</button>
+                    <button>I3</button>
+                    <button>I4</button>
+                    <button>J1</button>
+                    <button>J2</button>
+                    <button>J3</button>
+                    <button>J4</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Form container -->
+              <div class="passengerInfo font-inter flex-1">
+                <h3
+                  class="text-2xl font-semibold border-b-2 border-dashed py-2"
+                >
+                  Select Your Seat
+                </h3>
+
+                <!-- Price Info -->
+                <div
+                  class="priceInfoContainer bg-[#F7F8F8] p-4 rounded-2xl mt-4"
+                >
+                  <!-- priceTable-->
+                  <div class="overflow-x-auto border-b-2 border-[#C7C7CA]">
+                    <table class="table">
+                      <!-- head -->
+                      <thead>
+                        <tr>
+                          <th>
+                            Seat
+                            <span
+                              class="font-bold bg-[#1DD100] px-3 text-white rounded-xl"
+                              >2</span
+                            >
+                          </th>
+                          <th>Class</th>
+                          <th>Price</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- row 1 -->
+                        <tr>
+                          <td>C2</td>
+                          <td>Economoy</td>
+                          <td>550</td>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr>
+                          <td>C2</td>
+                          <td>Economoy</td>
+                          <td>550</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- Total -->
+                  <div class="font-medium flex justify-between py-3">
+                    <p>Total Price</p>
+                    <p>BDT <span>1100</span></p>
+                  </div>
+
+                  <!-- Cupon input -->
+                  <div class="border-2 rounded-lg w-full flex">
+                    <input
+                      type="text"
+                      placeholder="Have any Coupon?"
+                      class="px-4 py-2 outline-none flex-1"
+                    />
+                    <button
+                      class="bg-[#1DD100] h-full p-2 rounded-md text-white"
+                    >
+                      Apply
+                    </button>
+                  </div>
+
+                  <!-- Grand-total -->
+                  <div class="font-medium flex justify-between py-3">
+                    <p>Grand Total</p>
+                    <p>BDT <span>1100</span></p>
+                  </div>
+                </div>
+
+                <!-- Form area -->
+                <form action="">
+                  <div class="flex flex-col mb-3">
+                    <label for="">Passenger Name* </label>
+                    <input
+                      type="text"
+                      placeholder="Enter your name"
+                      class="input input-bordered w-full"
+                    />
+                  </div>
+
+                  <div class="flex flex-col mb-3">
+                    <label for="">Phone Number* </label>
+                    <input
+                      type="text"
+                      placeholder="Enter your phone number"
+                      class="input input-bordered w-full"
+                    />
+                  </div>
+
+                  <div class="flex flex-col mb-3">
+                    <label for="">Email ID* </label>
+                    <input
+                      type="text"
+                      placeholder="Enter your email id"
+                      class="input input-bordered w-full"
+                    />
+                  </div>
+
+                  <div class="flex">
+                    <input
+                      type="submit"
+                      class="btn w-full bg-[#1DD100] text-white"
+                    />
+                  </div>
+                  <div class="flex *:border-b-2 justify-between my-3">
+                    <a href="#">Terms and Condition</a>
+                    <a href="#">Cancellation Policy</a>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </main>
