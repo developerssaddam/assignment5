@@ -12,3 +12,13 @@ body {
 .primary_color {
   color: #1dd100;
 }
+
+.bgGreen {
+  background-color: #1dd100;
+  color: #ffffff;
+}
+
+.bgGray {
+  background-color: #f7f8f8;
+  color: #7d8085;
+}
