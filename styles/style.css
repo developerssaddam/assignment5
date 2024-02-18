@@ -2,12 +2,13 @@
 
 body {
   font-family: "Raleway", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .font-inter {
   font-family: "Inter", sans-serif;
 }
 
-.primary_color{
-    color: #1DD100;
+.primary_color {
+  color: #1dd100;
 }
