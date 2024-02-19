@@ -137,6 +137,34 @@
       <!-- Header end -->
       <!-- Main Section start -->
       <main>
+        <!--Modal-->
+        <dialog id="modalPopup" class="modal">
+          <div class="modal-box">
+            <form method="dialog">
+              <button
+                class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+              >
+                ✕
+              </button>
+            </form>
+            <div class="flex justify-center">
+              <img src="images/success.png" alt="" class="w-24 mb-5" />
+            </div>
+            <div class="text-center">
+              <h3 class="font-bold text-2xl">SUCCESS</h3>
+              <p class="py-4">
+                Thank you for Booking Our Bus Seats. We are working hard to find
+                the best service and deals for you.
+                <span>Shortly you will find a confirmation in your email.</span>
+              </p>
+              <button class="btn bg-[#27AE60] px-20 rounded-3xl text-white">
+                Continue
+              </button>
+            </div>
+          </div>
+        </dialog>
+        <!--Modal end-->
+
         <!-- Offer section -->
         <div class="max-w-[80%] mx-auto">
           <!-- section title -->
@@ -447,7 +475,7 @@
                 </div>
 
                 <!-- Form area -->
-                <form action="">
+                <form id="userForm" action="">
                   <div class="flex flex-col mb-3">
                     <label for="">Passenger Name* </label>
                     <input
@@ -475,12 +503,13 @@
                     />
                   </div>
 
-                  <div class="flex">
-                    <input
-                      type="submit"
-                      value="Next"
-                      class="btn w-full bg-[#1DD100] text-white"
-                    />
+                  <div class="flex flex-col mb-3">
+                    <button
+                      id="submitBtn"
+                      class="btn text-white bg-[#1DD100] w-full"
+                    >
+                      Next
+                    </button>
                   </div>
                   <div class="flex *:border-b-2 justify-between my-3">
                     <a href="#">Terms and Condition</a>

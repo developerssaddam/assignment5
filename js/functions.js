@@ -123,3 +123,12 @@ function showElement(elementId) {
   const inputField = document.getElementById(elementId);
   inputField.classList.remove("hidden");
 }
+
+// ModalShow function
+document.getElementById("submitBtn").addEventListener("click", function (e) {
+  e.preventDefault();
+  // modalShow
+  const modal = document.getElementById("modalPopup");
+  modal.showModal();
+  console.log(modal);
+});
