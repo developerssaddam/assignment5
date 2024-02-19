@@ -22,10 +22,27 @@ for (const seat of allSeat) {
 
     // Show seat name and price in dataTable.
     createTr(targetBtn.innerText, "tbody");
+
+    // Update total price.
+    const totalPrice = getInnerText("totalPrice");
+    setInnerText("totalPrice", totalPrice + 550);
+
+    // Update Grand totalPrice.
+    const grandTotalPrice = getInnerText("grandTotal");
+    setInnerText("grandTotal", grandTotalPrice + 550);
+
+    // Validation One can buy ticket.
+    if (totalPrice === 1650) {
+      for (const seat of allSeat) {
+        seat.setAttribute("disabled", true);
+      }
+    }
+
+    ////////////////////////////////////////
   });
 }
 
-// Get innderText function.
+// Get innerText function.
 function getInnerText(elementId) {
   const getElement = document.getElementById(elementId);
   const textValue = getElement.innerText;
