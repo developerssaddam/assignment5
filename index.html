@@ -157,7 +157,10 @@
                 the best service and deals for you.
                 <span>Shortly you will find a confirmation in your email.</span>
               </p>
-              <button class="btn bg-[#27AE60] px-20 rounded-3xl text-white">
+              <button
+                onclick="hideModal('modalPopup')"
+                class="btn bg-[#27AE60] px-20 rounded-3xl text-white"
+              >
                 Continue
               </button>
             </div>
@@ -488,7 +491,7 @@
                   <div class="flex flex-col mb-3">
                     <label for="">Phone Number* </label>
                     <input
-                      type="text"
+                      type="number"
                       placeholder="Enter your phone number"
                       class="input input-bordered w-full"
                     />

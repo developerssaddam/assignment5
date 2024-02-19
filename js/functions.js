@@ -124,11 +124,28 @@ function showElement(elementId) {
   inputField.classList.remove("hidden");
 }
 
-// ModalShow function
+// ModalShow and getUserData function
 document.getElementById("submitBtn").addEventListener("click", function (e) {
   e.preventDefault();
-  // modalShow
+
+  const inputField = document.getElementsByClassName("input");
+  const totalPrice = getInnerText("totalPrice");
   const modal = document.getElementById("modalPopup");
-  modal.showModal();
-  console.log(modal);
+
+  const phoneNumber = inputField[1].value;
+  if (totalPrice == 0 || phoneNumber == "") {
+    alert("You must buy ticket and give phone number!");
+  } else {
+    modal.showModal();
+    for (const input of inputField) {
+      input.value = "";
+    }
+  }
 });
+
+// Modal hide function
+function hideModal(element) {
+  const modal = document.getElementById(element);
+  modal.classList.add("hidden");
+  location.reload();
+}
