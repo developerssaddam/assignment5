@@ -31,14 +31,12 @@ for (const seat of allSeat) {
     const grandTotalPrice = getInnerText("grandTotal");
     setInnerText("grandTotal", grandTotalPrice + 550);
 
-    // Validation One can buy ticket.
+    // Validation One can buy 4 tickets.
     if (totalPrice === 1650) {
       for (const seat of allSeat) {
         seat.setAttribute("disabled", true);
       }
     }
-
-    ////////////////////////////////////////
   });
 }
 
@@ -80,4 +78,48 @@ function createTr(btnText, elementId) {
 
   const tbody = document.getElementById(elementId);
   tbody.appendChild(tr);
+}
+
+// applyCoupon function.
+function applyCoupon(elementId) {
+  const inputValue = document.getElementById(elementId);
+  const inputText = inputValue.value;
+  const inputTextValue = inputText.split(" ").join("").toUpperCase();
+
+  // Calculation discount.
+  if (inputTextValue === "NEW15") {
+    const grandTotalPrice = getInnerText("grandTotal");
+    const discount = grandTotalPrice * 0.15;
+    setInnerText("discountPrice", discount);
+
+    const discountGrandTotal = grandTotalPrice - discount;
+    setInnerText("grandTotal", discountGrandTotal);
+
+    hideElement("couponInputField");
+    showElement("discountField");
+  } else if (inputTextValue === "COUPLE20") {
+    const grandTotalPrice = getInnerText("grandTotal");
+    const discount = grandTotalPrice * 0.2;
+    setInnerText("discountPrice", discount);
+
+    const discountGrandTotal = grandTotalPrice - discount;
+    setInnerText("grandTotal", discountGrandTotal);
+
+    hideElement("couponInputField");
+    showElement("discountField");
+  } else {
+    alert("You don't have any discount.");
+  }
+}
+
+// Hide element function
+function hideElement(elementId) {
+  const inputField = document.getElementById(elementId);
+  inputField.classList.add("hidden");
+}
+
+// Show element function
+function showElement(elementId) {
+  const inputField = document.getElementById(elementId);
+  inputField.classList.remove("hidden");
 }

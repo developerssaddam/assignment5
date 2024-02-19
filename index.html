@@ -410,16 +410,30 @@
                     <p>Total Price</p>
                     <p>BDT <span id="totalPrice">0</span></p>
                   </div>
+                  <!-- discount price -->
+                  <div
+                    id="discountField"
+                    class="hidden font-medium flex justify-between py-3"
+                  >
+                    <p>Discount</p>
+                    <p>BDT <span id="discountPrice">0</span></p>
+                  </div>
 
                   <!-- Cupon input -->
-                  <div class="border-2 rounded-lg w-full flex">
+                  <div
+                    id="couponInputField"
+                    class="border-2 rounded-lg w-full flex"
+                  >
                     <input
+                      id="couponInput"
                       type="text"
                       placeholder="Have any Coupon?"
                       class="px-4 py-2 outline-none flex-1"
                     />
                     <button
+                      id="applyBtn"
                       class="bg-[#1DD100] h-full p-2 rounded-md text-white"
+                      onclick="applyCoupon('couponInput')"
                     >
                       Apply
                     </button>
